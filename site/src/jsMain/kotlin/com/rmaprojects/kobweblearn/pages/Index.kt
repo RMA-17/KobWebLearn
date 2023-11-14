@@ -26,10 +26,10 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.launch
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import org.jetbrains.compose.web.attributes.InputType
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Br
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Input
 import org.jetbrains.compose.web.dom.P
@@ -86,6 +86,7 @@ fun HomePage() {
                     scope.launch {
                         val apiResponse = fetchData()
                         apiResponseText = apiResponse.parseAsString()
+                        console.log(apiResponseText)
                     }
                 }
                 .toAttrs()
@@ -102,7 +103,10 @@ fun HomePage() {
                 .toAttrs()
         ) {
             //Putting "P" is not enough, you must put "Text" inside the content param
-            Text(apiResponseText)
+            apiResponseText.split("\n").forEach {
+                Text(it)
+                Br()
+            }
         }
     }
 }

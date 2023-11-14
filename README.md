@@ -6,8 +6,13 @@ just creates a blank home page (which prints to the console so you can confirm i
 If you are still learning, consider instantiating the `app` template (or one of the examples) to see actual,
 working projects.
 
-# MY NOTES
+### MY NOTES
 
 * jsMain indicates Front-End, jvmMain indicates Back-end.
 * :common module is used to make reusable components/classes for both jsMain/jvmMain in :site module
 * Every file named "Index" in jsMain, represents as a main page of the directory (root of website)
+
+
+## IMO:
+Kobweb still unstable and not recommended to have a production with.
+I just simply use KobWeb only for preview and experimenting
