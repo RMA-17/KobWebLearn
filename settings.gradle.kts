@@ -9,3 +9,4 @@ pluginManagement {
 rootProject.name = "kobweblearn"
 
 include(":site")
+include(":common")
